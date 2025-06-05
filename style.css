@@ -16,6 +16,7 @@ body {
   background: linear-gradient(-45deg, #6a11cb, #2575fc, #43e97b, #38f9d7);
   background-size: 400% 400%;
   animation: gradientFlow 15s linear infinite;
+  font-size: 445px;
 }
 
 section a{
