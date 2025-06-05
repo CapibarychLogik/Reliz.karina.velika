@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(-45deg, #6a11cb, #2575fc, #43e97b, #38f9d7);
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.overlay {
+  background: #fff;
+  max-width: 700px;
+  width: 100%;
+  border-radius: 25px;
+  padding: 3rem 4rem;
+  box-shadow: 0 20px 40px rgba(47, 128, 237, 0.3);
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #2F80ED;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #56CCF2;
+  margin-bottom: 2rem;
+  font-style: normal;
+}
+
+.content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.content ul {
+  text-align: left;
+  max-width: 400px;
+  margin: 1.5rem auto 2rem;
+  padding-left: 1.2rem;
+  color: #2F80ED;
+}
+
+.content ul li {
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+.theme-toggle {
+  background-color: #56CCF2;
+  border: none;
+  padding: 15px 50px;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(86, 204, 242, 0.6);
+  transition: background-color 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.theme-toggle:hover {
+  background-color: #2F80ED;
+  box-shadow: 0 12px 30px rgba(47, 128, 237, 0.8);
+}
+
+a.page-link {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 36px;
+  border-radius: 30px;
+  background: #27AE60;
+  box-shadow: 0 7px 20px rgba(39, 174, 96, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+a.page-link:hover {
+  background: #219150;
+  box-shadow: 0 9px 25px rgba(33, 145, 80, 0.7);
+}
+
+footer{
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #56CCF2;
+  margin-bottom: 2rem;
+  font-style: normal;
+}
+
+.content h1{
+  color: #2575fc;
+}
+
+footer h2{
+  color: #2F80ED;
+   font-style: normal;
+   font-size: 1.3rem;
+}
