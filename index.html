@@ -1,0 +1,101 @@
+
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CalmUI — Спокій у кольорах</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="overlay" id="overlay">
+    <header class="header">
+      <h1>CalmUI</h1>
+      <p class="subtitle">Твоя особиста перерва від метушні</p>
+      <label class="switch">
+        <input type="checkbox" id="themeToggle" onchange="toggleTheme()" />
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <main class="main-content">
+      <section class="quote-section">
+        <p class="quote" id="quote">Глибоко вдихни. Ти вже на правильному шляху.</p>
+        <button onclick="nextQuote()">Нова фраза</button>
+      </section>
+
+      <section class="benefits">
+        <h2>Навіщо це потрібно?</h2>
+        <ul>
+          <li>🧠 Заспокоїти розум</li>
+          <li>🎨 Насолодитися кольором</li>
+          <li>📴 Відключитися на хвилину</li>
+          <li>💬 Отримати м’яку мотивацію</li>
+        </ul>
+      </section>
+
+      <section class="timer-section">
+        <h2>Релакс-таймер</h2>
+        <button onclick="startTimer()">Почати 1 хвилину спокою</button>
+        <p id="timerDisplay"></p>
+      </section>
+    <section class="buttonpage2">
+      <a href="page2.html">Про нас</a>
+    </section>
+
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 CalmUI. Релакс тут і зараз.</p>
+    </footer>
+  </div>
+
+  <script>
+    const quotes = [
+      "Глибоко вдихни. Ти вже на правильному шляху.",
+      "Тиша — це найкращий співрозмовник.",
+      "Усе, що потрібно — вже всередині тебе.",
+      "Знайди момент, щоб просто бути.",
+      "Навіть найкоротша пауза має значення.",
+      "Спокій — це сила без шуму."
+    ];
+
+    function nextQuote() {
+      const quoteElement = document.getElementById('quote');
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      quoteElement.textContent = quotes[randomIndex];
+    }
+
+    function startTimer() {
+      let seconds = 60;
+      const display = document.getElementById('timerDisplay');
+      display.textContent = "60 секунд залишилось...";
+      const timer = setInterval(() => {
+        seconds--;
+        display.textContent = `${seconds} секунд залишилось...`;
+        if (seconds <= 0) {
+          clearInterval(timer);
+          display.textContent = "Час вийшов. Молодець!";
+        }
+      }, 1000);
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    const gradients = [
+      "linear-gradient(-45deg, #6a11cb, #2575fc, #43e97b, #38f9d7)",
+      "linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4)",
+      "linear-gradient(-45deg, #a18cd1, #fbc2eb)",
+      "linear-gradient(-45deg, #f6d365, #fda085)",
+    ];
+
+    let currentGradient = 0;
+    setInterval(() => {
+      currentGradient = (currentGradient + 1) % gradients.length;
+      document.body.style.background = gradients[currentGradient];
+      document.body.style.backgroundSize = "400% 400%";
+    }, 10000);
+  </script>
+</body>
+</html>
